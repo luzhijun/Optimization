@@ -1,0 +1,23 @@
+total 0
+drwxrwxrwt  2 root root  40 Nov 23 16:21 .
+drwxr-xr-x 19 root root 740 Nov 23 16:22 ..
+Filesystem                             Size  Used Avail Use% Mounted on
+/dev/vda1                               89G  1.7G   83G   2% /
+none                                   4.0K     0  4.0K   0% /sys/fs/cgroup
+udev                                   3.8G  4.0K  3.8G   1% /dev
+tmpfs                                  780M  392K  779M   1% /run
+none                                   5.0M     0  5.0M   0% /run/lock
+none                                   3.9G     0  3.9G   0% /run/shm
+none                                   100M     0  100M   0% /run/user
+/dev/vdb5                              493G  1.1G  466G   1% /home
+192.168.122.1:/ossdata/vp02/test/data  2.0T  1.0T  1.0T  50% /home/admin/nfs
+total                                  2.6T  1.1T  1.6T  40% -
+read from disk 
+0.00user 1.87system 0:01.87elapsed 99%CPU (0avgtext+0avgdata 2292maxresident)k
+256inputs+0outputs (1major+126minor)pagefaults 0swaps
+write in shm 
+0.00user 1.89system 0:01.90elapsed 99%CPU (0avgtext+0avgdata 2264maxresident)k
+0inputs+0outputs (0major+123minor)pagefaults 0swaps
+read from shm
+0.02user 3.26system 0:45.26elapsed 7%CPU (0avgtext+0avgdata 2308maxresident)k
+0inputs+2097160outputs (0major+123minor)pagefaults 0swaps
