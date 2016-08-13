@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1" user-scalable="no">
+
+<script type="text/javascript" src="./vendors/pace/pace.min.js"></script>
+<script id="font-hack" type="text/javascript">if (/windows/i.test(navigator.userAgent)) {
+    var el = document.createElement('style');
+    el.innerHTML = ''
+        + '@font-face {font-family:"noto-thin";src:local("Microsoft Yahei");}'
+        + '@font-face {font-family:"noto-light";src:local("Microsoft Yahei");}';
+    document.head.insertBefore(el, document.getElementById('font-hack'));
+}
+</script>
+<title>Example</title>
+<script type="text/javascript" src="./js/echarts.min.js"></script>
+<script type="text/javascript" src="./js/data.js"></script>
+</head>
+<body>
+<div id="main" style="width: 500px;height:500px;"></div>
+<script type="text/javascript">
+        // 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.getElementById('main'));
+
+
+        var itemStyle = {
+        normal: {
+            opacity: 0.8,
+            shadowBlur: 10,
+            shadowOffsetX: 0,
+            shadowOffsetY: 0,
+            shadowColor: 'rgba(0, 0, 0, 0.5)'
+        }
+    };
+
+
+
+    option = {
+        baseOption: {
+            timeline: {
+                axisType: 'category',
+                orient: 'vertical',
+                autoPlay: true,
+                inverse: true,
+                playInterval: 1000,
+                left: null,
+                right: 0,
+                top: 20,
+                bottom: 20,
+                width: 55,
+                height: null,
+                label: {
+                    normal: {
+                        textStyle: {
+                            color: '#999'
+                        }
+                    },
+                    emphasis: {
+                        textStyle: {
+                            color: '#fff'
+                        }
+                    }
+                },
+                symbol: 'none',
+                lineStyle: {
+                    color: '#555'
+                },
+                checkpointStyle: {
+                    color: '#bbb',
+                    borderColor: '#777',
+                    borderWidth: 2
+                },
+                controlStyle: {
+                    showNextBtn: false,
+                    showPrevBtn: false,
+                    normal: {
+                        color: '#666',
+                        borderColor: '#666'
+                    },
+                    emphasis: {
+                        color: '#aaa',
+                        borderColor: '#aaa'
+                    }
+                },
+                data: []
+            },
+            backgroundColor: '#404a59',
+            title: [{
+                'text': 0,
+                textAlign: 'center',
+                left: '63%',
+                top: '55%',
+                textStyle: {
+                    fontSize: 100,
+                    color: 'rgba(255, 255, 255, 0.7)'
+                }
+            }],
+            tooltip: {
+                padding: 5,
+                backgroundColor: '#222',
+                borderColor: '#777',
+                borderWidth: 1,
+                formatter: function (obj) {
+                    var value = obj.value;
+                    return '('+value[0]+','+value[1]+')' + '<br>';
+                }
+            },
+            grid: {
+                left: '12%',
+                right: '110'
+            },
+            xAxis: {
+                type: 'value',
+                name: 'X',
+                max: 5,
+                min: -5,
+                nameGap: 25,
+                nameLocation: 'middle',
+                nameTextStyle: {
+                    fontSize: 18
+                },
+                splitLine: {
+                    show: false
+                },
+                axisLine: {
+                    lineStyle: {
+                        color: '#ccc'
+                    }
+                },
+                axisLabel: {
+                    formatter: '{value} '
+                }
+            },
+            yAxis: {
+                type: 'value',
+                name: 'Y',
+                max: 5,
+                min: -5,
+                nameTextStyle: {
+                    color: '#ccc',
+                    fontSize: 18
+                },
+                axisLine: {
+                    lineStyle: {
+                        color: '#ccc'
+                    }
+                },
+                splitLine: {
+                    show: false
+                },
+                axisLabel: {
+                    formatter: '{value} '
+                }
+            },
+
+             series: [
+                {
+                    type: 'scatter',
+                    itemStyle: itemStyle,
+                    data: data[0]
+
+                }
+            ],
+            animationDurationUpdate: 1000,
+            animationEasingUpdate: 'quinticInOut'
+        },
+        options: []
+    };
+    for (var n = 0; n < 44; n++) {
+        option.baseOption.timeline.data.push(data['label'][n]);
+        option.options.push({
+            title: {
+                show: true,
+                'text': data['label'][n] + ''
+            },
+            series: {
+                name: data[n],
+                type: 'scatter',
+                itemStyle: itemStyle,
+                data: data[n],
+            }
+        });
+    }
+
+    myChart.setOption(option);
+    </script>
+</body>
+</html>
