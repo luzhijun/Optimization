@@ -23,6 +23,7 @@ MathJax.Hub.Config({
 
   </head>
   <body>
+
     <section class="page-header">
       <h1 class="project-name">Optimization</h1>
       <h2 class="project-tagline">最优化领域</h2>
@@ -39,7 +40,31 @@ MathJax.Hub.Config({
 <h1>
 <a id="最优化研究" class="anchor" href="#%E6%9C%80%E4%BC%98%E5%8C%96%E7%A0%94%E7%A9%B6" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>最优化研究</h1>
 
-<p>整理了下熟悉的智能优化算法，从上到下先整理了下cma-es，后续部分只给了源码，详细研究内容有空再补上。</p>
+<script type="text/javascript">
+function createIframe(){
+  var i = document.createElement("iframe");
+  i.src = "lizi.html";
+  i.scrolling = "no";
+  i.width = "510px";
+  i.height = "500px";
+  i.marginwidth="0";
+  i.marginheight="0";
+  i.frameBorder="0";
+  document.getElementById("div-that-holds-the-iframe").appendChild(i);
+};
+
+// Check for browser support of event handling capability
+if (window.addEventListener)
+window.addEventListener("load", createIframe, false);
+else if (window.attachEvent)
+window.attachEvent("onload", createIframe);
+else window.onload = createIframe;
+</script>
+<div id='div-that-holds-the-iframe' align="middle"></div>
+<p>以上为对函数$f(x,y)$用智能算法优化完整过程。
+$$f(x,y)=3(1-x^2)e^{-x^2-(y+1)^2}-10(\frac{x}{5}-x^3-y^5)e^{-x^2-y^2}-\frac{e^{-(x+1)^2-y^2}}{3}$$
+智能算法就是在不断采样迭代中自适应地找到最好解。
+项目整理了下熟悉的智能优化算法，从上到下先整理了下cma-es，后续部分只给了源码，详细研究内容有空再补上。</p>
 
 <h2>
 <a id="目录" class="anchor" href="#%E7%9B%AE%E5%BD%95" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>目录</h2>
