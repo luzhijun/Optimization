@@ -8,20 +8,21 @@ MathJax.Hub.Config({
 }); 
 </script>
 <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML">
-# 目前最优化研究成果
+# 最优化研究
+整理了下熟悉的智能优化算法，从上到下先整理了下cma-es，后续部分只给了源码，详细研究内容有空再补上。
 ## 目录
 * cma-es
  + [分段数对效果的影响(show)](fenduan.html)
  + [针尖函数参数优化](https://github.com/luzhijun/Optimization/tree/gh-pages/cma-es/cluster)
- + [CMA使用不同误差计算方法对非线性曲线拟合结果的影响](img/pdf/CMA使用不同误差计算方法对非线性曲线拟合结果的影响.pdf)
+ + [CMA使用不同误差计算方法对非线性曲线拟合结果的影响(show)](img/pdf/CMA使用不同误差计算方法对非线性曲线拟合结果的影响.pdf)
  + [分段函数平滑拟合（show）](pinghua.html)
  + [傅里叶函数动态参数调整(show)](img/pdf/UseMQHOATOFitParameters.pdf)
- + 参数调配
- + 分布式部署
- + 分布式测试
- + 重启机制
+ + [$\sigma$,$\lambda$参数调配(show)](sigma.html)
+ + [OSS批量计算python版](https://github.com/luzhijun/Optimization/tree/gh-pages/cma-es/batchcompute_python_sdk)
+ + [OSS分布式框架测试](https://github.com/luzhijun/Optimization/tree/gh-pages/cma-es/test_ud)
+ + [陷入局部最优重启机制](https://github.com/luzhijun/Optimization/tree/gh-pages/cma-es/restart)
 * EGO
- + 算法实现
+ + [算法框架](https://github.com/luzhijun/Optimization/tree/gh-pages/EGO)
 * MQHOA
  + v1.0
  + v2.0
@@ -44,5 +45,6 @@ MathJax.Hub.Config({
 
 ## 说明
 
-*有部分项目有html动态展现效果显示*
+show部分为html或者pdf显示效果。部分html有视频显示，由于国内视频中转站考虑速度原因采取http链接，国外youtube的https链接在国内又用不上，而github采用https链接，https网站包含http链接会认为不安全，所以会出现*视频无法显示情况*，只有手工操作下，比如火狐在地址栏左边点一下允许不安全链接即可显示。  
+
 
