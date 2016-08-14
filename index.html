@@ -24,7 +24,9 @@
 <p></p>
 
 <h1>
-<a id="目前最优化研究成果" class="anchor" href="#%E7%9B%AE%E5%89%8D%E6%9C%80%E4%BC%98%E5%8C%96%E7%A0%94%E7%A9%B6%E6%88%90%E6%9E%9C" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>目前最优化研究成果</h1>
+<a id="最优化研究" class="anchor" href="#%E6%9C%80%E4%BC%98%E5%8C%96%E7%A0%94%E7%A9%B6" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>最优化研究</h1>
+
+<p>整理了下熟悉的智能优化算法，从上到下先整理了下cma-es，后续部分只给了源码，详细研究内容有空再补上。</p>
 
 <h2>
 <a id="目录" class="anchor" href="#%E7%9B%AE%E5%BD%95" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>目录</h2>
@@ -35,19 +37,19 @@
 <ul>
 <li><a href="fenduan.html">分段数对效果的影响(show)</a></li>
 <li><a href="https://github.com/luzhijun/Optimization/tree/gh-pages/cma-es/cluster">针尖函数参数优化</a></li>
-<li><a href="img/pdf/CMA%E4%BD%BF%E7%94%A8%E4%B8%8D%E5%90%8C%E8%AF%AF%E5%B7%AE%E8%AE%A1%E7%AE%97%E6%96%B9%E6%B3%95%E5%AF%B9%E9%9D%9E%E7%BA%BF%E6%80%A7%E6%9B%B2%E7%BA%BF%E6%8B%9F%E5%90%88%E7%BB%93%E6%9E%9C%E7%9A%84%E5%BD%B1%E5%93%8D.pdf">CMA使用不同误差计算方法对非线性曲线拟合结果的影响</a></li>
+<li><a href="img/pdf/CMA%E4%BD%BF%E7%94%A8%E4%B8%8D%E5%90%8C%E8%AF%AF%E5%B7%AE%E8%AE%A1%E7%AE%97%E6%96%B9%E6%B3%95%E5%AF%B9%E9%9D%9E%E7%BA%BF%E6%80%A7%E6%9B%B2%E7%BA%BF%E6%8B%9F%E5%90%88%E7%BB%93%E6%9E%9C%E7%9A%84%E5%BD%B1%E5%93%8D.pdf">CMA使用不同误差计算方法对非线性曲线拟合结果的影响(show)</a></li>
 <li><a href="pinghua.html">分段函数平滑拟合（show）</a></li>
 <li><a href="img/pdf/UseMQHOATOFitParameters.pdf">傅里叶函数动态参数调整(show)</a></li>
-<li>参数调配</li>
-<li>分布式部署</li>
-<li>分布式测试</li>
-<li>重启机制</li>
+<li><a href="sigma.html">$\sigma$,$\lambda$参数调配(show)</a></li>
+<li><a href="https://github.com/luzhijun/Optimization/tree/gh-pages/cma-es/batchcompute_python_sdk">OSS批量计算python版</a></li>
+<li><a href="https://github.com/luzhijun/Optimization/tree/gh-pages/cma-es/test_ud">OSS分布式框架测试</a></li>
+<li><a href="https://github.com/luzhijun/Optimization/tree/gh-pages/cma-es/restart">陷入局部最优重启机制</a></li>
 </ul>
 </li>
 <li>EGO
 
 <ul>
-<li>算法实现</li>
+<li><a href="https://github.com/luzhijun/Optimization/tree/gh-pages/EGO">算法框架</a></li>
 </ul>
 </li>
 <li>MQHOA
@@ -75,7 +77,6 @@
 <ul>
 <li><a href="img/pdf/%E7%99%BE%E5%88%86%E6%AF%94%E8%B7%9D%E7%A6%BB%E4%B8%8E%E5%85%B6%E4%BB%96%E8%B7%9D%E7%A6%BB%E6%9C%80%E5%B0%8F%E4%BA%8C%E4%B9%98%E6%B3%95%E6%8B%9F%E5%90%88%E7%A0%94%E7%A9%B6.pdf">百分比距离、绝对值距离(show)</a></li>
 <li><a href="img/pdf/%E7%82%B9%E5%88%B0%E7%9B%B4%E7%BA%BF%E8%B7%9D%E7%A6%BB%E4%B8%8E%E5%9E%82%E7%BA%BF%E8%B7%9D%E7%A6%BB%E7%9A%84%E5%B9%B3%E6%96%B9%E5%92%8C%E6%9C%80%E5%B0%8F%E6%B3%95%E5%9C%A8%E7%9B%B4%E7%BA%BF%E5%9B%9E%E5%BD%92%E4%B8%AD%E7%9A%84%E7%A0%94%E7%A9%B6.pdf">欧几里得距离(show)</a></li>
-<li>
 </ul>
 </li>
 <li>cec2014
@@ -89,7 +90,7 @@
 <h2>
 <a id="说明" class="anchor" href="#%E8%AF%B4%E6%98%8E" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>说明</h2>
 
-<p><em>有部分项目有html动态展现效果显示</em></p>
+<p>show部分为html或者pdf显示效果。部分html有视频显示，由于国内视频中转站考虑速度原因采取http链接，国外youtube的https链接在国内又用不上，而github采用https链接，https网站包含http链接会认为不安全，所以会出现<em>视频无法显示情况</em>，只有手工操作下，比如火狐在地址栏左边点一下允许不安全链接即可显示。  </p>
 
       <footer class="site-footer">
         <span class="site-footer-owner"><a href="https://github.com/luzhijun/Optimization">Optimization</a> is maintained by <a href="https://github.com/luzhijun">luzhijun</a>.</span>
