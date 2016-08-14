@@ -1,13 +1,4 @@
-<script type="text/x-mathjax-config"> 
-MathJax.Hub.Config({ 
-  tex2jax: {
-  inlineMath: [ ['$','$'], ["\\(","\\)"] ],
-      displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
-      processEscapes: true
-  } 
-}); 
-</script>
-<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML">
+
 # 最优化研究
 整理了下熟悉的智能优化算法，从上到下先整理了下cma-es，后续部分只给了源码，详细研究内容有空再补上。
 ## 目录
