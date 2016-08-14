@@ -1,6 +1,6 @@
 {
   "name": "Optimization",
   "tagline": "最优化领域",
-  "body": "# 目前最优化研究成果\r\n## 目录\r\n* CMA-ES\r\n + [分段数对效果的影响](cma-es/分段数对效果的影响/分段数对拟合效果的影响.html)\r\n + 针尖函数参数优化\r\n + mse、mae、mpe拟合\r\n + 分段函数拟合\r\n + 参数调配\r\n + 分布式部署\r\n + 分布式测试\r\n + 重启机制\r\n* EGO\r\n + 算法实现\r\n* MQHOA\r\n + v1.0\r\n + v2.0\r\n + v3.0\r\n* 其他算法\r\n + 粒子群\r\n + 蜂群\r\n + 萤火虫\r\n + 遗传算法\r\n + 蝙蝠算法\r\n + 进化策略\r\n + 差分进化\r\n* cec2014\r\n + matlab代码\r\n\r\n## CMA-ES\r\n*有部分项目有html动态展现效果显示*\r\n",
+  "body": "# 目前最优化研究成果\r\n## 目录\r\n* CMA-ES\r\n + [分段数对效果的影响](fenduan.html)\r\n + 针尖函数参数优化\r\n + mse、mae、mpe拟合\r\n + 分段函数拟合\r\n + 参数调配\r\n + 分布式部署\r\n + 分布式测试\r\n + 重启机制\r\n* EGO\r\n + 算法实现\r\n* MQHOA\r\n + v1.0\r\n + v2.0\r\n + v3.0\r\n* 其他算法\r\n + 粒子群\r\n + 蜂群\r\n + 萤火虫\r\n + 遗传算法\r\n + 蝙蝠算法\r\n + 进化策略\r\n + 差分进化\r\n* cec2014\r\n + matlab代码\r\n\r\n## CMA-ES\r\n*有部分项目有html动态展现效果显示*",
   "note": "Don't delete this file! It's used internally to help with page regeneration."
 }
