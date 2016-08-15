@@ -1,5 +1,6 @@
 
 # 最优化研究
+项目主页<https://luzhijun.github.io/Optimization/>  
 整理了下熟悉的智能优化算法，从上到下先整理了下cma-es，后续部分只给了源码，详细研究内容有空再补上。
 ## 目录
 * cma-es
